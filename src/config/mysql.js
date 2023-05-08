@@ -1,3 +1,4 @@
+/*
 const mysql = require("mysql");
 const logger = require('./logger');
 let { mysqlEnv } = require('./vars');
@@ -48,3 +49,4 @@ module.exports = {
   pool: pool,
   initMysqlTable: initMysqlTables
 }
+*/

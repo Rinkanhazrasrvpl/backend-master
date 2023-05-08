@@ -11,9 +11,9 @@ const { pool, initMysqlTable} = require('./config/mysql')
 // open mongoose connection
 mongoose.connect();
 
-s3.initS3();
+//s3.initS3();
 
-initMysqlTable()
+//initMysqlTable()
 
 // listen to requests
 app.listen(port, () => logger.info(`server started on port ${port} (${env})`));
