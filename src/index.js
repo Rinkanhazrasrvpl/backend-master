@@ -6,7 +6,7 @@ const app = require('./config/express');
 const mongoose = require('./config/mongoose');
 const s3 = require('./config/s3');
 
-const { pool, initMysqlTable} = require('./config/mysql')
+//const { pool, initMysqlTable} = require('./config/mysql')
 
 // open mongoose connection
 mongoose.connect();
