@@ -28,3 +28,29 @@ module.exports.checkAddStaffManageReq = (data) => {
     }
     return errcounter <= 0;
 }
+
+
+module.exports.CheckStaffListReq = (data) => {
+    let errcounter = 0;
+    if (data.limit === undefined || data.limit == null) {
+        logger.info("Limit is missing");
+        errcounter++;
+    }
+    if (data.skip === undefined || data.skip == null) {
+        logger.info("Skip is missing");
+        errcounter++;
+    }
+   
+    return errcounter <= 0;
+}
+
+module.exports.staffUserReq = (data) => {
+    let errcounter = 0;
+    if (data.id === undefined || data.id == null) {
+        logger.info("Staff Id is missing");
+        errcounter++;
+    }
+    
+   
+    return errcounter <= 0;
+}

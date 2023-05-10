@@ -21,17 +21,14 @@ exports.addStaff = async (req, res, next) => {
                 if (!user) {
                     const saltRounds = 10;
 
-                    const newPassword = reqData['password'];
-
-                    console.log("password1111>>>>>>>", newPassword);
-
-                    bcrypt.hash(newPassword, saltRounds, function (err, hash) {
+                    bcrypt.hash(reqData['password'], saltRounds, function (err, hash) {
                         if (err) {
                             // Handle error
+                            console.log("error",err);
                         } else {
 
-                            reqData['password'] = hash;
-                            console.log("newPassword222>>>>>>>>>", reqData);
+                            staffData['password'] = hash;
+                            console.log("Save request data>>>>>>>>>", staffData);
                             staffData.save(function (err) {
                                 if (err) {
                                     res.send({ "status": 500, "message": "unable to insert document" });

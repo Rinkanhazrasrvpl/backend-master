@@ -3,10 +3,13 @@ const staffUserSchema = new mongoose.Schema({
     provider: {
         type: String,
     },
-    role: {
+    roleId: {
         type: String
     },
     email: {
+        type: String,
+    },
+    phone : {
         type: String,
     },
     password: {
@@ -19,4 +22,4 @@ const staffUserSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('user', staffUserSchema);
+module.exports = mongoose.model('user_staff', staffUserSchema);
